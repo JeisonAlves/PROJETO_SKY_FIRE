@@ -15,7 +15,8 @@ class Menu:
         self.surf = pygame.transform.scale(self.surf, (800, 600))#adjust the image for the window size
         self.rect = self.surf.get_rect(left=0, top=0)
 
-    def run(self):
+    def run(self, ):
+        menu_option = 0
         pygame.mixer_music.load('./asset/Menu.wav')#select the music for the menu
         pygame.mixer_music.play(-1) #play the music and -1 is to repeat
         while True:
@@ -25,8 +26,10 @@ class Menu:
             self.menu_text(150, "FIRE", COLOR_BLUE, ((WIN_WIDTH / 2), 220))
 
             for i in range(len(MENU_OPTION)):
+                if i == menu_option:
+                    self.menu_text(50, MENU_OPTION[i], COLOR_YELLOW, ((WIN_WIDTH / 2), 430 + 35 * i))
+                else:
                     self.menu_text(50, MENU_OPTION[i], COLOR_WHITE, ((WIN_WIDTH / 2), 430 + 35 * i))
-
             pygame.display.flip()
 
             # Check for all events
