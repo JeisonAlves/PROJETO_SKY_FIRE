@@ -6,14 +6,14 @@ from pygame.font import Font
 from pygame.rect import Rect
 from pygame.surface import Surface
 
-from code.Const import COLOR_BLUE, WIN_WIDTH, COLOR_YELLOW, MENU_OPTION, COLOR_WHITE
+from code.Const import COLOR_BLUE, WIN_WIDTH, COLOR_YELLOW, MENU_OPTION, COLOR_WHITE, WIN_HEIGHT
 
 
 class Menu:
     def __init__(self, window):
         self.window = window
         self.surf = pygame.image.load('./asset/MenuBg.png').convert_alpha()  # select the menu image
-        self.surf = pygame.transform.scale(self.surf, (800, 600))  # adjust the image for the window size
+        self.surf = pygame.transform.scale(self.surf, (WIN_WIDTH,WIN_HEIGHT))  # adjust the image for the window size
         self.rect = self.surf.get_rect(left=0, top=0)
 
     def run(self, ):
