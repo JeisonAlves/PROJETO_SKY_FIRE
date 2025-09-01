@@ -20,13 +20,7 @@ MENU_OPTION = ('NEW GAME 1P',
 
 # E
 ENTITY_SPEED = {
-    'Level1Bg0': 0,
-    'Level1Bg1': 1,
-    'Level1Bg2': 2,
-    'Level1Bg3': 3,
-    'Level1Bg4': 4,
-    'Level1Bg5': 5,
-    'Level1Bg6': 6,
+#Menu background
     'MenuBg0': 0,
     'MenuBg1': 0,
     'MenuBg2': 0,
@@ -35,4 +29,13 @@ ENTITY_SPEED = {
     'MenuBg5': 3,
     'MenuBg6': 0,
     'MenuBg7': 0,
+    #Level 1 background
+    'Level1Bg0': 0,
+    'Level1Bg1': 1,
+    'Level1Bg2': 2,
+    'Level1Bg3': 3,
+    'Level1Bg4': 4,
+    'Level1Bg5': 5,
+    'Level1Bg6': 6,
+
 }

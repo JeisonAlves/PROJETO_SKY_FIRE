@@ -10,7 +10,7 @@ from code.EntityFactory import EntityFactory
 
 class Menu:
     def __init__(self, window):
-        # Menu image with parallax effect
+        # Menu image list
         self.window = window
         self.entity_list: list[Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('MenuBg'))
@@ -28,7 +28,7 @@ class Menu:
         pygame.mixer_music.play(-1)  # to play and repeat the music
 
         while True:
-            # Desenha o fundo (parallax / entidades)
+            # For menu background parallax run
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
                 ent.move()
